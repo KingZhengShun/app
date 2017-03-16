@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<!-- SEO  -->
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<meta name="author" content="" />
+		<!-- 苹果专用 -->
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="blank" />
+		<meta name="format-detection" content="telephone=no" />
+		<!-- 简单移动端适配 -->
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+		<!-- 图标 -->
+		<link rel="shortcut icon" href="">
+
+		<title>模板</title>
+		<link rel="stylesheet" href="iconfont/iconfont.css" />
+		<link rel="stylesheet" href="css/swiper-3.3.1.min.css">
+		<script type="text/javascript" src="js/jquery-2.1.0.js"></script>
+		<script type="text/javascript" src="js/swiper-3.3.1.jquery.min.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+	</head>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			outline: none;
+			box-sizing: border-box;
+		}
+		
+		html,
+		body {
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			padding: 0;
+			border: 0;
+		}
+		
+		header {
+			height: 46px;
+			background-color: #e4366b;
+			width: 100%;
+			position: fixed;
+			top: 0;
+			left: 0;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		
+		header h3 {
+			line-height: 46px;
+			text-align: center;
+			font-size: 20px;
+			color: #fff;
+			width: 60%;
+		}
+		
+		header span {
+			color: #670d27;
+			width: 17%;
+			padding-left: 3%;
+			font-weight: bold;
+		}
+		
+		header div {
+			width: 20%;
+		}
+		
+		header div button {
+			border-bottom: 0.5px solid #a20c3c;
+			border-top: 0.5px solid #fff;
+			width: 80%;
+			height: 30px;
+			background-color: #e4366b;
+			border-radius: 5px;
+			color: #fff;
+		}
+		
+		footer {
+			height: 50px;
+			width: 100%;
+			position: fixed;
+			left: 0;
+			bottom: 0;
+			background-color: #616065;
+		}
+		
+		#footer {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		
+		#footer div {
+			height: 50px;
+			width: 33.3%;
+			color: #fff;
+			text-align: center;
+			line-height: 50px;
+			font-size: 1.6rem;
+			border-left: 1px solid #282828;
+		}
+		
+		#footer div:nth-child(2) {
+			border-top: 2px solid #e4366b;
+			line-height: 48px;
+		}
+		
+		nav {
+			height: 50px;
+			background-color: #52525a;
+			width: 100%;
+			position: relative;
+			top: 46px;
+			left: 0;
+			display: block;
+			line-height: 50px;
+			padding: 0 3%;
+			color: #fff;
+			font-size: 0.9rem
+		}
+		
+		section {
+			width: 100%;
+			position: absolute;
+			top: 46px;
+			bottom: 50px;
+			text-align: center;
+			padding: 0 10%;
+			background-color: #f7f7f7;
+		}
+		section>div{
+			margin-top: 1rem;
+			height: 55%;
+			width: 100%;
+			margin-bottom: 1.5rem;
+		}
+		section>div img{
+			width: 100%;
+			height: 100%;
+			border: 1px solid #ccc;
+		}
+		
+		section>p{
+			height: 2rem;
+			line-height: 1rem;
+			font-size: 0.75rem;
+			text-align: left;
+			color: #666;
+		}
+		
+	</style>
+
+	<body>
+		<header>
+			<span class="iconfont fanhui">&#xe619;</span>
+			<h3>商品介绍</h3>
+			<div>
+				<button id="indexToReg">分享</button>
+			</div>
+		</header>
+		
+		<section>
+			
+		</section>
+		<footer>
+			<div id="footer">
+				<div>
+					<h6 id="jieshao">介绍</h6>
+				</div>
+				<div>
+					<h6 id="xiangqing">详情</h6>
+				</div>
+				<div>
+					<h6 id="shipai">实拍</h6>
+				</div>
+
+			</div>
+		</footer>
+		</footer>
+	</body>
+	<script type="text/javascript">
+		$(".fanhui").click(function() {
+			window.location.href = 'index.html';
+		});
+		$("#jieshao").click(function(){
+			window.location.href = 'jieshao.html';
+		});
+		$("#xiangqing").click(function(){
+			window.location.href = 'xiangqing.html';
+		});
+		$("#shipai").click(function(){
+			window.location.href = 'shipai.html';
+		});
+		var goods = localStorage.getItem("doodsID");
+		var dataJSON = {
+			"goodsID":goods
+		}
+		$.ajax({
+			type: "post",
+			
+			url: "http://datainfo.duapp.com/shopdata/getGoods.php",
+			data: dataJSON,
+			dataType:"JSONP",
+			success: function(data) {
+				//console.log(data[0].detail);
+				for (var i = 0; i < data.length; i++) {
+					var dv = "<div><img src='"+data[i].goodsListImg+"'/></div><p>"+data[i].detail+"</p>"
+					$("section").append(dv)
+				}
+
+			},
+			error: function(XMLHttpRequest, textStatus, errorThrown) {
+				console.log("XMLHttpRequest==" + XMLHttpRequest);
+				console.log("textStatus==" + textStatus);
+				console.log("errorThrown==" + errorThrown);
+			}
+		});
+	</script>
+
+</html>

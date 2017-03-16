@@ -1,0 +1,149 @@
+{
+	"index.html": {
+		"resources": [
+			"js/iscroll-probe.js",
+			"js/app.js",
+			"js/iscroll.js",
+			"js/jquery-2.1.0.js",
+			"iconfont/iconfont.woff",
+			"js/swiper-3.3.1.jquery.min.js",
+			"css/swiper-3.3.1.min.css",
+			"iconfont/iconfont.css",
+			"login.html",
+			"class.html",
+			"cart.html",
+			"myXiu.html",
+			"jieshao.html"
+		],
+		"refer": [
+			"login.html",
+			"class.html",
+			"cart.html",
+			"myXiu.html",
+			"jieshao.html"
+		]
+	},
+	"login.html": {
+		"resources": [
+			"index.html",
+			"register.html"
+		],
+		"refer": [
+			"index.html",
+			"register.html"
+		]
+	},
+	"class.html": {
+		"resources": [
+			"classindex.html",
+			"index.html",
+			"cart.html",
+			"myXiu.html",
+			"more.html"
+		],
+		"refer": [
+			"classindex.html",
+			"index.html",
+			"cart.html",
+			"myXiu.html",
+			"more.html"
+		]
+	},
+	"classindex.html": {
+		"resources": [
+			"cart.html",
+			"class.html",
+			"index.html",
+			"jieshao.html"
+		],
+		"refer": [
+			"cart.html",
+			"class.html",
+			"index.html",
+			"jieshao.html"
+		]
+	},
+	"more.html": {
+		"resources": [
+			"login.html",
+			"cart.html",
+			"index.html"
+		],
+		"refer": [
+			"login.html",
+			"cart.html",
+			"index.html"
+		]
+	},
+	"cart.html": {
+		"resources": [
+			"myXiu.html",
+			"index.html",
+			"class.html",
+			"more.html"
+		],
+		"refer": [
+			"myXiu.html",
+			"index.html",
+			"class.html",
+			"more.html"
+		]
+	},
+	"myXiu.html": {
+		"resources": [
+			"more.html",
+			"img/11_03.png",
+			"cart.html",
+			"class.html",
+			"index.html"
+		],
+		"refer": [
+			"more.html",
+			"cart.html",
+			"class.html",
+			"index.html"
+		]
+	},
+	"register.html": {
+		"resources": [
+			"index.html"
+		],
+		"refer": [
+			"index.html"
+		]
+	},
+	"jieshao.html": {
+		"resources": [
+			"xiangqing.html",
+			"index.html",
+			"js/app.js",
+			"js/jquery-2.1.0.js",
+			"iconfont/iconfont.woff",
+			"js/swiper-3.3.1.jquery.min.js",
+			"css/swiper-3.3.1.min.css",
+			"iconfont/iconfont.css"
+		],
+		"refer": [
+			"xiangqing.html",
+			"index.html"
+		]
+	},
+	"xiangqing.html": {
+		"resources": [
+			"index.html",
+			"shipai.html"
+		],
+		"refer": [
+			"index.html",
+			"shipai.html"
+		]
+	},
+	"shipai.html": {
+		"resources": [
+			"index.html"
+		],
+		"refer": [
+			"index.html"
+		]
+	}
+}

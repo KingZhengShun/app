@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- SEO  -->
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <!-- 苹果专用 -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="blank" />
+    <meta name="format-detection" content="telephone=no" />
+    <!-- 简单移动端适配 -->
+   	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <!-- 图标 -->
+	<link rel="shortcut icon" href="">
+    
+    <title>模板</title>
+    <link rel="stylesheet" href="iconfont/iconfont.css" />
+    <link rel="stylesheet" href="css/swiper-3.3.1.min.css">
+    <script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
+    <script type="text/javascript" src="js/swiper-3.3.1.jquery.min.js" ></script>
+    <script type="text/javascript" src="js/app.js" ></script>
+</head>
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+		border: 0;
+		outline: none;
+		box-sizing: border-box;
+	}
+	html,body{
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		border: 0;
+	}
+	header{
+		height: 46px;
+		background-color: #e4366b;
+		width: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	header h3{
+		line-height: 46px;
+		text-align: center;
+		font-size: 20px;
+		color: #fff;
+		width: 60%;
+	}
+	header span{
+		color: #670d27;
+		width: 17%;
+		padding-left: 3%;
+		font-weight: bold;
+	}
+	header div{
+		width: 20%;
+	}
+	header div button{
+		border-bottom: 0.5px solid #a20c3c;
+		border-top: 0.5px solid #fff;
+		width: 80%;
+		height: 30px;
+		background-color: #e4366b;
+		border-radius: 5px;
+	}
+	footer{
+		height: 50px;
+		width: 100%;
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		background-color: #484850;
+	}
+	#footer{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+	#footer div{
+		height: 100%;
+		width: 20%;
+		color: #fff;
+		text-align: center;
+		padding-top: 2px;
+		padding-bottom: 5px;
+	}
+	#footer div span{
+		font-size: 0.9rem
+	}
+	#footer div h6{
+		margin-top: 3px;
+		font-size: 0.5rem;
+		font-weight: normal;
+	}
+	#footer div:nth-child(5){
+		border-top: 2px solid #e4366b;
+		padding-top: 0px;
+	}
+	section{
+		width: 100%;
+		position: absolute;
+		top: 46px;
+		bottom: 50px;
+		text-align: center;
+	}
+	ul{
+		list-style: none;
+		margin: auto;
+		width: 80%;
+		border:  1px solid #ccc;
+		border-radius: 5px;
+	}
+	.ulOne{
+		margin-top: 10%;
+		margin-bottom: 8%;
+	}
+	ul li{
+		height: 15%;
+		width: 100%;
+		border-bottom: 1px solid #eee;
+		text-align: left;
+		padding: 3% 5%;
+		
+	}
+	.ulOne li:last-child{
+		border-bottom: none;
+	}
+	.ulTwo li:last-child{
+		border-bottom: none;
+	}
+	ul span{
+		float: right;
+	}
+	#loginBtn{
+		display: inline-block;
+		margin-top: 2rem;
+		height: 1.8rem;
+		width: 80%;
+		background-color: #e83b70;
+		color: #fff;
+		border-radius: 5px;
+		font-size: 1rem
+	}
+	#moreBtn{
+		display: inline-block;
+		margin-top: 2rem;
+		height: 1.8rem;
+		width: 80%;
+		background-color: #e83b70;
+		color: #fff;
+		border-radius: 5px;
+		font-size: 1rem
+	}
+</style>
+<body>
+	<header>
+		<span class="iconfont">&#xe619;</span>
+		<h3>更多</h3>
+		<div>
+			
+		</div>
+	</header>
+	<section>
+		<ul class="ulOne">
+			<li>常见问题<span>></span></li>
+			<li>系统更新<span>></span></li>
+			<li>软件更新<span>></span></li>
+			<li>扫描二维码<span>></span></li>
+		</ul>
+		<ul class="ulTwo">
+			<li>我要提意见<span>></span></li>
+			<li>关于<span>></span></li>
+		</ul>
+		<button id="moreBtn">退出登录</button>
+	</section>
+	<footer>
+		<div id="footer">
+			<div id="index">
+				<span class="iconfont">&#xe644;</span>
+				<h6>首页</h6>
+			</div>
+			<div id="class">
+				<span class="iconfont">&#xe644;</span>
+				<h6>分类</h6>
+			</div>
+			<div id="cart">
+				<span class="iconfont">&#xe61b;</span>
+				<h6>购物车</h6>
+			</div>
+			<div id="myXiu">
+				<span class="iconfont">&#xe646;</span>
+				<h6>我的秀</h6>
+			</div>
+			<div id="more">
+				<span class="iconfont">&#xe644;</span>
+				<h6>更多</h6>
+			</div>
+		</div>
+	</footer>
+</body>
+<script type="text/javascript">
+		$('#index').click(function(){
+			window.location.href='index.html';
+		});
+		$("#class").click(function(){
+			window.location.href='class.html';
+		});
+		$("#cart").click(function(){
+			window.location.href='cart.html';
+		});
+		$("#myXiu").click(function(){
+			window.location.href='myXiu.html';
+		});
+		$("#more").click(function(){
+			window.location.href='more.html';
+		});
+		$('#moreBtn').click(function(){
+			localStorage.clear();
+			window.location.href='login.html';
+		})
+</script>
+</html>
